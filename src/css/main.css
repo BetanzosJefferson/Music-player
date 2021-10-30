@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@300;400;700&display=swap');
+:root{
+    --mainFont:'Zen Kaku Gothic Antique', sans-serif;
+    --titleColor : rgba(0, 0, 0, 0.6);
+    --active: rgba(0,0,0,0.8);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+html, body{
+    box-sizing: border-box;
+    font-family: var(--mainFont);
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    max-width: 768px;
+    min-width: 320px;
+    background-image: linear-gradient(
+      to bottom,
+      #dee8fd,
+      #e1ebfd,
+      #e4eefd,
+      #e8f0fc,
+      #ecf3fc
+    );
+    border-radius: 1.2rem;
+    padding: 2rem;
+    color: white;
+    box-shadow: 2px 2px 3px hsl(250, 23%, 60%);
+}
+.fas{
+    color: var(--titleColor);
+}
+/* Title */
+.title{
+    margin-bottom: 1rem;
+}
+.title__heading{
+    color: var(--titleColor);
+    text-align: center;
+}
+/* Cover */
+.cover-container{
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cover-image{
+    max-width: 250px;
+    height: 250px;
+    border-radius: 10%;
+    transition: all 0.2s ease;
+}
+.cover-image:hover{
+    opacity: 0.6;
+}
+/* Artist */
+.artist-container{
+    text-align: center;
+    color: var(--titleColor);
+}
+/* Progress bar */
+.progress-container{
+    margin-top: 1rem;
+    background-color: white;
+    height: 0.6rem;
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.progress-bar{
+    background-color: blue;
+    width: 0%;
+    height: 100%;
+}
+/* Controls */
+.controls-container{
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+/* List Songs */
+
+.lists{
+    margin-top: 1rem;
+}
+.lists a{
+    text-decoration: none;
+    display: block;
+    padding: 0;
+    color: var(--titleColor);
+}
+.lists .active{
+    font-weight: bold;
+    color: var(--active);
+}
