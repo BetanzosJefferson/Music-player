@@ -10,6 +10,7 @@
     padding: 0;
 }
 html, body{
+    height: 100vh;
     box-sizing: border-box;
     font-family: var(--mainFont);
 }
@@ -21,7 +22,6 @@ body{
 .container{
     margin-top: 10px;
     margin-bottom: 10px;
-    height: 100%;
     width: 70%;
     background-image: linear-gradient(
       to bottom,
@@ -104,4 +104,12 @@ body{
 .lists .active{
     font-weight: bold;
     color: var(--active);
+}
+
+@media (min-width : 768px) {
+    .container{
+        padding: 2rem;
+        width: 340px;
+    }
+    
 }
