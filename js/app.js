@@ -57,7 +57,6 @@ prevSong.addEventListener("click", function(){
   currentIndexSong--;
   if(currentIndexSong < 0){
     currentIndexSong = 0
-    console.log(songList.length)
     const lastSong = songList.length - 1
     loadSong(lastSong)
   }else{
@@ -69,11 +68,7 @@ audio.addEventListener("timeupdate", function(){
   const currentTime = audio.currentTime;
   const totalDuration = audio.duration
   const porcent = (currentTime / totalDuration) * 100
-  console.log(porcent)
   progress.style.width = porcent + "%";
-})
-audio.addEventListener("pause", function(){
-  console.log("pausado")
 })
 
 //EndSong
